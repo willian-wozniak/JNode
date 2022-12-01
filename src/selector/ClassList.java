@@ -21,6 +21,7 @@ public class ClassList
     
     public String[] getClassList() {
         String clazz = this.jnode.getAttribute("class");
+        if (clazz.isEmpty()) return new String[0];
         String[] listas = clazz.trim().split(" ");
         for (int i = 0; i < listas.length; i++) {
             listas[i] = listas[i].trim();
